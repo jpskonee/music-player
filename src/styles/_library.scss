@@ -1,0 +1,84 @@
+.library {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20rem;
+  height: 100%;
+  background-color: whitesmoke;
+  box-shadow: 2px 2px 50px rgb(172, 164, 164);
+  overflow: scroll;
+  transform: translateX(-100%);
+  transition: all 0.5s ease;
+  opacity: 0;
+  h2 {
+    padding: 2rem;
+  }
+
+  .library-search {
+    padding: 2.5rem 2rem 1rem;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    border: grey;
+    color: black;
+  }
+}
+
+.library-song {
+  display: flex;
+  align-items: center;
+  padding: 2rem 2rem;
+  cursor: pointer;
+  img {
+    width: 30%;
+  }
+  &:hover {
+    background-color: gainsboro;
+  }
+}
+
+.song-description {
+  padding-left: 1rem;
+  h3 {
+    font-size: 1rem;
+  }
+  h4 {
+    font-size: 0.7rem;
+  }
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: lightgray transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  width: 5px;
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background: lightgray;
+  border-radius: 20px;
+  border: transparent;
+}
+
+.selected {
+  background: lightskyblue;
+}
+
+.active-libary {
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+.library-label {
+  z-index: 3;
+}
+
+@media screen and (max-width: 430px) {
+  .library {
+    width: 100%;
+  }
+}

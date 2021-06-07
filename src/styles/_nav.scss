@@ -1,0 +1,14 @@
+nav {
+  min-height: 10vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.library-nav-btn {
+  border: none;
+  cursor: pointer;
+  padding: 2rem 0 1rem;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
