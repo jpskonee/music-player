@@ -21,7 +21,8 @@
 
 @media screen and (max-width: 770px) {
   .song-container {
-    img {
+    .big-pics,
+    .big-pics-anim {
       width: 40%;
     }
   }
@@ -29,8 +30,9 @@
 
 @media screen and (max-width: 430px) {
   .song-container {
-    img {
-      width: 60%;
+    .big-pics,
+    .big-pics-anim {
+      width: 70%;
     }
   }
 }
