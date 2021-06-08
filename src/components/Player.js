@@ -102,7 +102,7 @@ const Player = (props) => {
         audioRef.current.volume = volume
         setTimeout(() => {
             setVolumeBar(false)
-        }, 6000);
+        }, 2500);
     };
 
     const volumeHandler = () => {

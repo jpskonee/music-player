@@ -1,15 +1,16 @@
 .song-container {
-  margin-top: 10vh;
-  min-height: 50vh;
+  margin-top: 08vh;
+  min-height: 55vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
-  img {
+  .big-pics {
     width: 20%;
     border-radius: 50%;
   }
+
   h2 {
     padding: 2rem 1rem 1rem 1rem;
   }
@@ -32,4 +33,40 @@
       width: 60%;
     }
   }
+}
+
+@keyframes big-pics {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.big-pics {
+  animation-duration: 6s;
+  animation-name: big-pics;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-delay: 4s;
+}
+
+@keyframes big-pics-anim {
+  from {
+    transform: skew(0px, 0px);
+  }
+
+  to {
+    transform: skew(15deg, 5deg);
+  }
+}
+
+.big-pics-anim {
+  animation-duration: 6s;
+  animation-name: big-pics-anim;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-delay: 2s;
 }

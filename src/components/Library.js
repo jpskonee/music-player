@@ -1,6 +1,7 @@
-import { TextField } from '@material-ui/core';
+import { FormControl, InputLabel, OutlinedInput } from '@material-ui/core';
 import React, { useState } from 'react';
 import LibrarySong from './LibrarySong';
+import SearchIcon from '@material-ui/icons/Search';
 
 const Library = (props) => {
     
@@ -14,7 +15,15 @@ const Library = (props) => {
     return (
         <div className={`library ${libOpen ? "" : "active-libary"}`}>
             <div className="library-search">
-                <TextField variant="outlined" onChange={playlistSearchHandler}  label="Search Playlist" />
+                <FormControl variant="outlined" >
+                    <InputLabel> Search Playlist</InputLabel>
+                    <OutlinedInput
+                    endAdornment={<SearchIcon onChange={playlistSearchHandler} style={{cursor: "pointer"}} />}
+                    variant="outlined"
+                    onChange={playlistSearchHandler}
+                    label="Search Playlist"
+                    />
+                </FormControl>
             </div>
             <div className="library-songs">
                 {songs.map((song) => (

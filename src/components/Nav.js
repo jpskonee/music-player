@@ -8,7 +8,7 @@ const Nav = (props) => {
     const { libOpen, setLibOpen } = props;
     return (
         <nav>
-            <h1> Waves </h1>
+            <div className="brand-name"> AGHO.DEV </div>
             <div onClick={() => (setLibOpen(!libOpen))} className="library-nav-btn">
                 <Tooltip title="Show Playlist">
                     <IconButton>

@@ -12,3 +12,14 @@ nav {
   transition: all 0.3s ease;
   z-index: 10;
 }
+
+.brand-name {
+  font-family: "Press Start 2P", cursive;
+  font-size: larger;
+
+  &:hover {
+    color: teal;
+    transform: translate(15px, -15px);
+    transition: all 1s ease;
+  }
+}
