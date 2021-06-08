@@ -5,6 +5,7 @@ import songLists from "./songlist";
 import "../src/styles/app.scss";
 import Library from "./components/Library";
 import Nav from "./components/Nav";
+import { CssBaseline } from "@material-ui/core";
 
 function App() {
 
@@ -84,7 +85,8 @@ function App() {
   }
     
   return (
-    <div className={`app ${!libOpen && "library-active"}`} style={{background:'url("https://www.transparenttextures.com/patterns/food.png")'}}>
+    <div className={`app ${!libOpen && "library-active"}`} style={{ background: 'url("https://www.transparenttextures.com/patterns/food.png")' }}>
+      <CssBaseline />
       <Nav
         libOpen = {libOpen}
         setLibOpen = {setLibOpen}
@@ -132,6 +134,7 @@ function App() {
         onEnded={musicEndHandler}
       >
       </audio>
+      <CssBaseline />
     </div>
   );
 };
