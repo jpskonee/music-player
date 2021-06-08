@@ -59,6 +59,10 @@ const Player = (props) => {
                 return;
             }
             setCurrentSong(songs[(getIndex - 1) % songListLength]);
+            setBeatGif(false)
+                setTimeout(() => {
+                setBeatGif(true)
+            }, 2500);
         } else if (direction === "skipForward") {
             setCurrentSong(songs[(getIndex + 1) % songListLength]);
         };
@@ -102,7 +106,7 @@ const Player = (props) => {
         audioRef.current.volume = volume
         setTimeout(() => {
             setVolumeBar(false)
-        }, 2500);
+        }, 3000);
     };
 
     const volumeHandler = () => {
